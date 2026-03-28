@@ -1,0 +1,20 @@
+{
+  "name": "barmaj-server",
+  "version": "1.0.0",
+  "description": "Barmaj backend — compiles Arduino C++ sketches via arduino-cli and returns .hex files",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "keywords": ["barmaj", "arduino", "compiler", "arabic"],
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "uuid": "^11.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
