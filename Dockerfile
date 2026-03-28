@@ -6,9 +6,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     ca-certificates \
     && rm -rf /var/lib/apt/lists/*
 
-# Install arduino-cli
-RUN curl -fsSL https://raw.githubusercontent.com/arduino/arduino-cli/master/install.sh | sh \
-    && mv /root/bin/arduino-cli /usr/local/bin/arduino-cli
+# Install arduino-cli by downloading the tarball directly
+RUN curl -fsSL https://downloads.arduino.cc/arduino-cli/arduino-cli_1.4.1_Linux_64bit.tar.gz \
+    | tar -xz -C /usr/local/bin arduino-cli
 
 # Initialize arduino-cli config and pre-install the AVR core
 # This bakes the core into the image so the first student compile is fast (~5s, not 60s)
